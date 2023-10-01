@@ -1,0 +1,34 @@
+{%  if USERINFO %}
+<table border="3px">
+    <tr>
+        <th>user_name</th>
+        <th>user_email</th>
+        <th>user_id</th>
+        <th>user_phonenumber</th>
+        <th>user_address</th>
+    </tr>
+    {% for u in USERINFO %}
+    <tr>
+        <td>{{ u.user_name }}</td>
+        <td>{{ u.user_email }}</td>
+        <td>{{ u.user_id }}</td>
+        <td>{{ u.user_phonenumber }}</td>
+        <td>{{ u.user_address }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>Wrong key </h2>
+{% endif %}
+<style>
+table,th,td{
+    border-color:dodgerblue;
+    border-radius: 3pt;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+th,td{
+    padding: 3pt;
+}
+</style>

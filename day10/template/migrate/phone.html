@@ -1,0 +1,33 @@
+{% if PHONE %}
+<table border="2px">
+    <tr>
+        <th>Phone_name</th>
+        <th>Brand_name</th>
+        <th>Realesed_date</th>
+        <th>Price</th>
+    </tr>
+    {% for p in PHONE %}
+    <tr>
+        <td>{{ p.Phone_name }}</td>
+        <td>{{ p.Brand_name }}</td>
+        <td>{{ p.Realesed_date }}</td>
+        <td>{{ p.Price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+
+{% endif %}
+
+<style>
+    table,th,td{
+        border-color:dodgerblue;
+        border-radius: 3pt;
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+    th,td{
+        padding: 3pt;
+    }
+    </style>

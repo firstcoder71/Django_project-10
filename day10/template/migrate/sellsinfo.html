@@ -1,0 +1,22 @@
+{% if sellde %}
+  <table border="3px">
+    <tr>
+      <th>traffic_name</th>
+      <th>traffic_email</th>
+      <th>phone_number</th>
+      <th>transaction_id</th>
+      <th>traffic_address</th>
+    </tr>
+    {% for ffff in sellde %}
+      <tr>
+        <td>{{ ffff.traffic_name }}</td>
+        <td>{{ ffff.traffic_email }}</td>
+        <td>{{ ffff.phone_number }}</td>
+        <td>{{ ffff.transaction_id }}</td>
+        <td>{{ ffff.traffic_address }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <h1>Wrong code</h1>
+{% endif %}

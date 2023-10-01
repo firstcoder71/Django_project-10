@@ -1,0 +1,21 @@
+{% if empd %}
+<table border="3px">
+    <tr>
+        <th>employe_name</th>
+        <th>employe_number</th>
+        <th>employe_email</th>
+        <th>employe_position</th>
+    </tr>
+    {% for e in empd %}
+    <tr>
+        <td>{{e.employe_name}}</td>
+        <td>{{e.employe_number}}</td>
+        <td>{{e.employe_email}}</td>
+        <td>{{e.employe_position}}</td>
+    </tr>
+    {% endfor %}
+</table>
+ {% else %}
+ <h1>Empty</h1>
+
+{% endif %}
